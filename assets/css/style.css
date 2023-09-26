@@ -1,0 +1,1012 @@
+/* ------------- [ Fonts ] ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+/* ------------- [colors] ------------ */
+:root {
+    --cyan: hsl(176, 50%, 47%);
+    --Darkcyan: hsl(176, 72%, 28%);
+    --Black: hsl(0, 0%, 0%);
+    --Darkgray: hsl(0, 0%, 48%);
+    --Offwhite: rgb(250 250 250);
+    --Commissioner: 'Commissioner', sans-serif;
+    --Width: 0%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--Commissioner);
+    font-size: 16px;
+    color: var(--Darkgray);
+    background-color: var(--Offwhite);
+}
+
+/* ------------- [headers] ------------ */
+
+h1,
+h2,
+h3 {
+    color: var(--Black);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+/* ------------- [buttons] ------------ */
+.btn {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 35px;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+}
+
+.bg-green {
+    background-color: var(--cyan);
+}
+
+.bg-gray {
+    background-color: var(--Darkgray);
+}
+
+.bg-green:hover,
+.bg-green:active {
+    background-color: var(--Darkcyan);
+}
+
+.btn:disabled{
+    background-color: var(--Darkgray);
+    opacity: 1;
+}
+.btn-bookmark {
+    color: var(--Darkgray);
+    background-color: #c7c7c745;
+}
+
+.btn-bookmark:focus{
+    box-shadow: none;
+}
+
+.active-bookmark {
+    color: #292626;
+    -webkit-filter: brightness(2.65) sepia(0.42) hue-rotate(129deg) saturate(5);
+            filter: brightness(2.65) sepia(0.42) hue-rotate(129deg) saturate(5);
+}
+
+/* -------------- [ header section / hero image ] ----------------- */
+
+header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 180px;
+    position: relative;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    margin: 0 auto;
+    padding: 0;
+    width: 95%;
+    max-width: 1600px;
+}
+
+.logo-position {
+    width: 9rem;
+}
+
+.navbar-padding {
+    padding-top: 25px;
+}
+
+.navbar-nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 18px;
+}
+
+.menu-item {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255);
+}
+
+.toggler-text {
+    font-weight: 500;
+    text-align: left;
+}
+
+.hero-image {
+    background: url('../../images/image-hero-desktop.jpg');
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+/* ------------- [section] ------------ */
+
+section {
+    margin: auto;
+    background-color: white;
+    min-width: 636px;
+    width: 65%;
+    max-width: 750px;
+    box-shadow: 0px 0px 1px hsl(0deg 0% 48% / 26%);
+    border-radius: 5px;
+    padding: 35px;
+    margin-bottom: 15px;
+}
+
+/* ------------- [section project intro] ------------ */
+
+.project-intro {
+    position: relative;
+}
+
+.visual-absolute {
+    position: absolute;
+    display: flex;
+    width:100%;
+    top: -30px;
+    left: 0;
+    align-content: center;
+    justify-content: center;
+}
+
+.project-intro h1,
+.project-intro p {
+    text-align: center;
+    margin: 15px;
+}
+
+.flex-intro {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.bookmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.bookmark-text {
+    padding-left: 25px;
+}
+
+/* ------------- [Progress] ------------ */
+
+.backers-progress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.border-progress {
+    border-left: 2px solid hsl(0deg 0% 48% / 50%);
+    border-right: 2px solid hsl(0deg 0% 48% / 50%);
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.digit {
+    font-weight: 700;
+    color: var(--Black);
+    font-size: 170%;
+    padding-bottom: 8px;
+}
+
+.progress-bar {
+    margin-top: 25px;
+    background-color: lightgray;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress {
+    /*width: 89.9%;*/
+    width: var(--Width);
+    height: 10px;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 5px;
+}
+
+/* ------------- [ Project ] ------------ */
+
+.about-this-project p,
+.about-this-project h2 {
+    padding-bottom: 35px;
+}
+
+.pledge-green {
+    color: var(--cyan);
+    font-weight: 500;
+    font-size: 80%;
+}
+
+.about-this-project p {
+    width: 100%;
+}
+
+.pledge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 0px 1px hsl(0deg 0% 48%);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.pledge-container p {
+    padding-top: 35px;
+}
+
+.stock-text {
+    vertical-align: text-top;
+    font-size: 80%;
+    padding-left: 5px;
+}
+
+/* --------------- [ Modal ] -------------- */
+
+#modal {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.25s ease-in-out;
+    border: 1px solid var(--Black);
+    border-radius: 5px;
+    background-color: var(--Offwhite);
+    z-index: 999;
+    width: 80%;
+    max-width: 750px;
+    height: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* --- 2 rows --- */
+    grid-auto-columns: 100%; /* --- 1 column --- */
+    grid-template-areas:
+    "header"
+    "body";  /* --- grid layout --- */
+}
+
+#modal.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+@-webkit-keyframes openModal {
+    0% {transform: translate(-50%, -50%) scale(0);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+@keyframes openModal {
+    0% {transform: translate(-50%, -50%) scale(0);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Black);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-in-out;
+}
+
+#overlay.active {
+    pointer-events: all;
+    -webkit-animation: overlay 0.25s forwards ease-in-out;
+            animation: overlay 0.25s forwards ease-in-out;
+}
+
+@-webkit-keyframes overlay {
+    0% {opacity: 0;}
+    100% {opacity: 0.5;}
+}
+
+@keyframes overlay {
+    0% {opacity: 0;}
+    100% {opacity: 0.5;}
+}
+
+.modal-header {
+    grid-area: header; /* --- assigned area from parent grid layout --- */
+    display: grid;
+    border: none;
+    grid-template-rows: 1fr .5fr .5fr; /* --- 3 rows --- */
+    grid-template-columns: 99% 1%; /* --- 2 columns --- */
+    grid-template-areas: 
+    "title close"
+    "..... ....."
+    "parag ....."; /* --- grid layout --- */
+}
+
+.modal-header h2 {
+    grid-area: title; /* --- assigned area from parent grid layout --- */
+}
+
+.modal-header p {
+    grid-area: parag; /* --- assigned area from parent grid layout --- */
+}
+
+#close-modal {
+    grid-area: close; /* --- assigned area from parent grid layout --- */
+    cursor: pointer;
+    align-self: start;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--Darkgray);
+}
+
+#close-modal:hover {
+    color: var(--cyan);
+}
+
+.modal-body {
+    grid-area: body; /* --- assigned area from parent grid layout --- */
+    display: grid;
+    grid-template-columns: 100%; /* --- 1 column --- */
+    row-gap: 20px; /* --- margin between rows (if rows is not set it's default is auto) --- */
+}
+
+.pledge-card {
+    border: 1px solid var(--Darkgray);
+    border-radius: 5px;
+    height: 140px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 60px 80px 80px; /* --- 3 rows --- */
+    grid-template-columns: 5% 80% 10% 5%; /* --- 4 columns --- */
+    grid-template-areas: 
+    ".   title quantity ."
+    ".   info  info     ."
+    "bid bid   bid    bid"; /* --- grid layout --- */
+}
+
+.pledge-card.open {
+    -webkit-animation: open 0.25s forwards ease-in-out;
+            animation: open 0.25s forwards ease-in-out;
+}
+
+@-webkit-keyframes open {
+    0% {height: 140px;}
+    0% {border: 1px solid var(--Black);}
+    100% {height: 220px;}
+    100% {border: 2px solid var(--cyan);}
+}
+
+@keyframes open {
+    0% {height: 140px;}
+    0% {border: 1px solid var(--Black);}
+    100% {height: 220px;}
+    100% {border: 2px solid var(--cyan);}
+}
+
+.pledge-card .title {
+    cursor: pointer;
+    grid-area: title; /* --- assigned area from parent grid layout --- */
+    display: grid;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.pledge-card .quantity {
+    cursor: pointer;
+    grid-area: quantity; /* --- assigned area from parent grid layout --- */
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.pledge-card .title span {
+    color: var(--cyan);
+    padding-left: 20px;
+}
+
+.pledge-card .quantity span {
+    padding-left: 5px;
+}
+
+.pledge-card .info {
+    cursor: pointer;
+    grid-area: info; /* --- assigned area from parent grid layout --- */
+    align-self: start;
+}
+
+.pledge-card .bid {
+    grid-area: bid; /* --- assigned area from parent grid layout --- */
+    border-top: 1px solid var(--Darkgray);
+    display: grid;
+    grid-template-rows: 100px; /* --- 1 row --- */
+    grid-template-columns: 5% 50% 20% 20% 5%; /* --- 5 columns --- */
+    grid-template-areas:
+    ". label input button ."; /* --- grid layout --- */
+}
+
+.pledge-card .bid label {
+    grid-area: label; /* --- assigned area from parent grid layout --- */
+    margin-top: 27.5px;
+}
+
+.pledge-card .bid input {
+    grid-area: input; /* --- assigned area from parent grid layout --- */
+    border: none;
+    height: 50%;
+    width: 75%;
+    margin-top: 12.5px;
+    border: 1px solid var(--Darkgray);
+    border-radius: 35px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.pledge-card .bid .continue {
+    cursor: pointer;
+    grid-area: button; /* --- assigned area from parent grid layout --- */
+    border: none;
+    height: 50%;
+    margin-top: 12.5px;
+    border-radius: 35px;
+    background-color: var(--cyan);
+    text-align: center;
+}
+
+.pledge-card .bid .continue:hover {
+    background-color: var(--Darkcyan);
+    color: var(--Offwhite);
+}
+
+.pledge-card .bid .continue:active {
+    background-color: var(--cyan);
+    border: 5px solid var(--Darkcyan);
+    color: var(--Black);
+}
+
+.pledge-card .bid input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.pledge-card .bid input::-moz-placeholder {
+    text-align: center;
+}
+
+.pledge-card .bid input:-ms-input-placeholder {
+    text-align: center;
+}
+
+.pledge-card .bid input::-ms-input-placeholder {
+    text-align: center;
+}
+
+.pledge-card .bid input::placeholder {
+    text-align: center;
+}
+
+.unavailable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/*--Sub-pledge modals - accessed via Home screen pledges--*/
+ 
+  
+.sub-modal-pledge {
+    display:none;
+    z-index:1000; /*--index increased to sit higehr than main modal --*/
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--Offwhite);
+    width: 90%;
+    max-width: 750px;
+    padding:10px 30px 30px 30px;
+    height:auto;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+}
+
+.pl-close {
+    color: var(--Darkgray);
+    display:block;
+    justify-self:right;
+    padding-right:10px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom:10px;
+}
+
+.pl-close:hover,
+.pl-close:focus {
+    color: var(--cyan);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sub-pl-content {
+    border: solid 2px var(--cyan);
+    border-radius:10px;
+    width:90%;
+    max-width: 700px;
+    height:auto;
+    display:grid;
+    place-self: center center;
+    justify-items:stretch;
+    grid-template-columns:5% 25% 10% 25% 5% 25% 5%;
+    grid-template-rows:20px auto auto auto;
+    grid-template-areas:
+    ". .         .         .         .         .         ."
+    ". pl-title  .    pl-txt-1       .         pl-stock  ."
+    ". pl-info   pl-info   pl-info   pl-info   pl-info   ."
+    "pl-pledge pl-pledge pl-pledge pl-pledge pl-pledge pl-pledge pl-pledge";
+}
+
+.pl-title {
+    grid-area: pl-title;
+    color:var(--Darkgray);
+}
+
+.pl-text1 {
+    grid-area: pl-txt-1;
+    color:var(--cyan);
+    font-weight: bold;
+}
+
+.pl-stock {
+    grid-area: pl-stock;
+    justify-self:end;
+}
+
+.pl-info {
+    grid-area: pl-info;
+    align-self:center;
+}
+
+.pl-pledge {
+    grid-area:pl-pledge;
+    border-top: solid 1px var(--Darkgray);
+    display:grid;
+    grid-template-columns: 5% 25% 20% 20% 5% 20% 5%;
+    grid-template-rows: 20px auto 20px;
+    grid-template-areas:
+    ".  .   .   .   .   .   ."
+    ".  pl-text2 . pl-value . pl-submit ."
+    ".  .   . . .   .   .";
+}
+
+.pl-text2 {
+    grid-area: pl-text2;
+}
+
+.pl-value{
+    grid-area: pl-value;
+    display:inline-block;
+    position:relative;
+    width:100%;
+    height:100%;
+    align-items:center;
+}
+
+.pl-value:before{
+    position:absolute;
+    content:"$";
+    top:50%;
+    transform: translateY(-50%);
+    left:5px;  
+}
+
+.pl-input{
+    text-align: center;
+    width:100%;
+    height:100%;
+    border: solid 1px var(--cyan);
+    border-radius: 35px;
+}
+
+.pl-submit {
+    grid-area: pl-submit;
+    width:100%;
+    justify-self:end;
+    background-color: var(--cyan);
+    border: 1px solid;
+    border-radius: 35px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;   
+}
+
+.pl-submit:hover,
+.pl-submit:active {
+    background-color: var(--Darkcyan);
+}
+
+/*--success modal --*/
+
+#success-container, #notification-container {
+    z-index:9999;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: var(--Offwhite);
+    width: 500px;
+    max-width: 100vw;
+    height:auto;
+    padding:30px;
+    height:auto;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+    justify-content:center;
+}
+
+#notification-container {
+    display: grid;
+    height: 200px;
+}
+
+#success-container.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+#notification-container.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+#success-modal {
+   text-align:center; 
+}
+
+#notification-modal {
+    display: grid;
+    place-self: center center;
+    font-size: 150%;
+    color: var(--Black);
+}
+
+#success-modal h3 {
+    padding:20px 0 20px 0px; 
+}
+
+#success-modal h3 {
+    margin:20px 0 20px 0px; 
+}
+
+#final-success {
+    background-color: var(--Darkcyan);
+    padding:15px;
+    border: 1px solid;
+    border-radius: 35px;
+    width:100px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ------------- [ MEDIA QUERIES - MOBILE ] ------------ */
+
+@media (max-width: 768px) {
+    .hero-image {
+        background: url('../../images/image-hero-mobile.jpg');
+        height: 285px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        margin-bottom: 165px;    
+    }
+
+    .row{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-nav{
+        width: 95%;
+        text-align: left;
+        background-color: var(--Offwhite);
+        border-radius: 5px;
+        box-shadow: 0px 20px 400px 72px rgb(0 0 0 / 67%);
+        position: absolute;
+        z-index: 2;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: var(--Darkgray);
+        padding: 25px 15px;
+        margin: 0;
+    }
+
+    .navbar-toggler{
+        background-image: url('../../images/icon-hamburger.svg');
+        width: auto;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .toggled{
+        background-image: url('../../images/icon-close-menu.svg');
+    }
+
+    .border-menu{
+        border-top: 2px solid hsl(0deg 0% 48% / 50%);
+        border-bottom: 2px solid hsl(0deg 0% 48% / 50%);
+    }
+
+    section{
+        width: 95%;
+        min-width: 500px;
+    }
+    
+    .pledge-card {
+        height: calc(200px - 1vw);
+        grid-template-rows: 60px calc(80px - 1vw) 60px calc(80px - 1vw); /* --- 4 rows --- */
+        grid-template-columns: 5% 90% 5%; /* --- 3 columns --- */
+        grid-template-areas: 
+        ".   title    ."
+        ".   info     ."
+        ".   quantity ."
+        "bid bid    bid"; /* --- grid layout --- */
+    }
+
+    @-webkit-keyframes open {
+        0% {height: calc(200px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(280px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    @keyframes open {
+        0% {height: calc(200px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(280px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    .pledge-card .quantity {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pledge-card {
+        height: calc(260px - 1vw);
+        row-gap: 20px;
+        grid-template-rows: 60px calc(100px - 1vw) 40px calc(100px - 1vw); /* --- 4 rows --- */
+        grid-template-columns: 5% 90% 5%; /* --- 3 columns --- */
+        grid-template-areas: 
+        ".   title    ."
+        ".   info     ."
+        ".   quantity ."
+        "bid bid    bid"; /* --- grid layout --- */
+    }
+
+    .pledge-card .quantity {
+        margin-bottom: 0;
+    }
+
+    @-webkit-keyframes open {
+        0% {height: calc(260px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(340px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    @keyframes open {
+        0% {height: calc(260px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(340px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    .pledge-card .title span {
+        padding-left: 0;
+        padding-top: 10px;
+        display: block;
+    }
+
+    .pledge-card .bid {
+        grid-template-columns: 5% 40% 25% 25% 5%; /* --- 5 columns --- */
+        grid-template-areas:
+        ". label input button ."; /* --- grid layout --- */
+    }
+
+    .pledge-card .bid label {
+        font-size: smaller;
+    }
+
+    .pledge-card .bid input {
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+
+    .pledge-card .bid .continue {
+        border-radius: 10px;
+        font-size: smaller;
+    }
+
+    section {
+        min-width: 90%;
+        width: 90%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .flex-intro {
+        justify-content: space-around;
+    }
+
+    .btn-bookmark {
+        padding-right: 10px;
+        background: none;
+    }
+
+    .bookmark-text {
+        display: none;
+    }
+
+    .backers-progress {
+        justify-content: center;
+    }
+
+    .progress-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .border-progress {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-top: 2px solid hsl(0deg 0% 48% / 50%);
+        border-bottom: 2px solid hsl(0deg 0% 48% / 50%);
+        margin-top: 35px;
+        margin-bottom: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .pledge-container {
+        display: block;
+
+    }
+
+    .pledge-green {
+        padding-top: 15px;
+        font-size: 100%;
+    }
+
+    .pledge-container p {
+        padding-top: 25px;
+    }
+
+    .stock-info {
+        padding-bottom: 25px;
+    }
+
+    .pl-submit, .pl-input {
+        text-align: center;
+        border-radius: 10px;
+        font-size: smaller;
+    }
+
+    .sub-pl-content {
+        width: 110%;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 375px) {
+    .pledge-card {
+        height: calc(280px - 1vw);
+        row-gap: 20px;
+        grid-template-rows: 60px calc(120px - 1vw) 40px calc(100px - 1vw); /* --- 4 rows --- */
+        grid-template-columns: 5% 90% 5%; /* --- 3 columns --- */
+        grid-template-areas: 
+        ".   title    ."
+        ".   info     ."
+        ".   quantity ."
+        "bid bid    bid"; /* --- grid layout --- */
+    }
+
+    @-webkit-keyframes open {
+        0% {height: calc(280px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(390px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    @keyframes open {
+        0% {height: calc(280px - 1vw);}
+        0% {border: 1px solid var(--Black);}
+        100% {height: calc(390px - 1vw);}
+        100% {border: 2px solid var(--cyan);}
+    }
+
+    .pledge-card .quantity {
+        padding-top: 20px;
+    }
+
+    .pledge-card .bid label {
+        margin-top: 35px;
+    }
+
+    .pledge-card .bid input {
+        align-self: center;
+        margin-bottom: 2.5px;
+    }
+
+    .pledge-card .bid .continue {
+        align-self: center;
+        margin-bottom: 2.5px;
+        font-size: 75%;
+    }
+
+}
